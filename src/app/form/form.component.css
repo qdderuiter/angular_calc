@@ -1,0 +1,15 @@
+main {
+  padding: 1em;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 0.3fr;
+}
+
+@media only screen and (max-width: 768px) {
+  .container {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
