@@ -40,10 +40,10 @@
         <input matInput type="number" #crypto min="0" placeholder="0,00" />
         <span matTextPrefix>€&nbsp;</span>
       </mat-form-field>
-      <button class="berekenen" mat-button color="primary">Berekenen</button>
+      <button class="berekenen" #berekenen (click)="berekenTotaal()" mat-button color="primary">
+        Berekenen
+      </button>
     </div>
   </form>
-  <div>
-    Totaal: 
-  </div>
+  <div>Totaal:</div>
 </main>

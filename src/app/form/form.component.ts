@@ -7,7 +7,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./form.component.css']
 })
 export class FormComponent {
-  berekenen() {
+  inkomen = 0
+  uitgaven_gezamenlijk = 0
+  uitgaven_persoonlijk = 0
+  aandelen = 0
+  crypto = 0
+  berekenTotaal() {
     
   }
 }
