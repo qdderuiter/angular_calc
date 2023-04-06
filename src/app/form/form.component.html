@@ -4,7 +4,7 @@
       <h1>Inkomen</h1>
       <mat-form-field appearance="fill" floatLabel="always">
         <mat-label>Netto inkomen</mat-label>
-        <input matInput type="number" #inkomen min="0" placeholder="0,00" />
+        <input matInput type="number" min="0" placeholder="0,00" />
         <span matTextPrefix>€&nbsp;</span>
       </mat-form-field>
       <h1 class="header">Uitgaven</h1>
@@ -40,10 +40,16 @@
         <input matInput type="number" #crypto min="0" placeholder="0,00" />
         <span matTextPrefix>€&nbsp;</span>
       </mat-form-field>
-      <button class="berekenen" #berekenen (click)="berekenTotaal()" mat-button color="primary">
+      <button
+        class="berekenen"
+        #berekenen
+        (click)="berekenTotaal()"
+        mat-button
+        color="primary"
+      >
         Berekenen
       </button>
     </div>
   </form>
-  <div>Totaal:</div>
+  <div>Totaal: {{ inkomen.value }}</div>
 </main>
