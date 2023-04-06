@@ -13,6 +13,7 @@ import { MatListModule } from '@angular/material/list';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { FormComponent } from './form/form.component';
 import {MatGridListModule} from '@angular/material/grid-list';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import {MatGridListModule} from '@angular/material/grid-list';
     BrowserAnimationsModule,
     MatGridListModule,
     LayoutModule,
+    FormsModule,
     MatToolbarModule,
     MatFormFieldModule,
     MatInputModule,

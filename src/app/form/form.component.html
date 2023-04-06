@@ -4,7 +4,7 @@
       <h1>Inkomen</h1>
       <mat-form-field appearance="fill" floatLabel="always">
         <mat-label>Netto inkomen</mat-label>
-        <input matInput type="number" min="0" placeholder="0,00" />
+        <input type="number" [(ngModel)]="inkomen" name="inkomen" matInput min="0" placeholder="0,00" />
         <span matTextPrefix>€&nbsp;</span>
       </mat-form-field>
       <h1 class="header">Uitgaven</h1>
@@ -13,7 +13,8 @@
         <input
           matInput
           type="number"
-          #uitgaven_gezamenlijk
+          [(ngModel)]="uitgaven_gezamenlijk" name="uitgaven_gezamenlijk"
+        
           min="0"
           placeholder="0,00"
         />
@@ -24,7 +25,7 @@
         <input
           matInput
           type="number"
-          #uitgaven_persoonlijk
+          [(ngModel)]="uitgaven_persoonlijk" name="uitgaven_persoonlijk"
           min="0"
           placeholder="0,00"
         />
@@ -32,24 +33,28 @@
       </mat-form-field>
       <mat-form-field appearance="fill" floatLabel="always">
         <mat-label>Aandelen</mat-label>
-        <input matInput type="number" #aandelen min="0" placeholder="0,00" />
+        <input matInput type="number" [(ngModel)]="aandelen" name="aandelen" min="0" placeholder="0,00" />
         <span matTextPrefix>€&nbsp;</span>
       </mat-form-field>
       <mat-form-field appearance="fill" floatLabel="always">
         <mat-label>Crypto</mat-label>
-        <input matInput type="number" #crypto min="0" placeholder="0,00" />
+        <input matInput type="number" [(ngModel)]="crypto" name="crypto" min="0" placeholder="0,00" />
+        <span matTextPrefix>€&nbsp;</span>
+      </mat-form-field>
+      <mat-form-field appearance="fill" floatLabel="always">
+        <mat-label>Spaardoelen</mat-label>
+        <input matInput type="number" [(ngModel)]="spaardoelen" name="spaardoelen" min="0" placeholder="0,00" />
         <span matTextPrefix>€&nbsp;</span>
       </mat-form-field>
       <button
         class="berekenen"
-        #berekenen
-        (click)="berekenTotaal()"
         mat-button
         color="primary"
+        (click)="berekenTotaal()"
       >
         Berekenen
       </button>
     </div>
+    <div>Totaal: {{totalSum}}</div>
   </form>
-  <div>Totaal: {{ inkomen.value }}</div>
 </main>
