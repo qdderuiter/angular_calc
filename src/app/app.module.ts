@@ -14,7 +14,8 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import { FormComponent } from './form/form.component';
 import {MatGridListModule} from '@angular/material/grid-list';
 import { FormsModule } from '@angular/forms';
-import {MatCard, MatCardModule} from '@angular/material/card';
+import { MatCardModule} from '@angular/material/card';
+import {MatTabsModule} from '@angular/material/tabs';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import {MatCard, MatCardModule} from '@angular/material/card';
     BrowserAnimationsModule,
     MatGridListModule,
     MatCardModule,
+    MatTabsModule,
     LayoutModule,
     FormsModule,
     MatToolbarModule,
