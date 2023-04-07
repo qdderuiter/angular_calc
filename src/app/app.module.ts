@@ -16,8 +16,6 @@ import {MatGridListModule} from '@angular/material/grid-list';
 import { FormsModule } from '@angular/forms';
 import { MatCardModule} from '@angular/material/card';
 import {MatTabsModule} from '@angular/material/tabs';
-import { NgChartsModule } from 'ng2-charts';
-
 
 @NgModule({
   declarations: [
@@ -40,7 +38,6 @@ import { NgChartsModule } from 'ng2-charts';
     MatSidenavModule,
     MatIconModule,
     MatListModule,
-    NgChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

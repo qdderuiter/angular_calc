@@ -85,7 +85,11 @@
       </button>
       <mat-card>
         <mat-card-header>Resterend maandbedrag</mat-card-header>
-        <mat-card-content>{{ showTotalSum }}</mat-card-content>
+
+        <mat-card-content
+          ><span matTextPrefix>€&nbsp;</span
+          >{{ showTotalSum }}</mat-card-content
+        >
       </mat-card>
     </div>
   </form>

@@ -19,7 +19,7 @@ export class FormComponent {
     return Math.floor(value * factor) / factor;
   }
   berekenTotaal() {
-    this.calculateTotal =   this.inkomen - this.uitgaven_gezamenlijk - this.uitgaven_persoonlijk - this.aandelen - this.crypto - this.spaardoelen
+    this.calculateTotal = this.inkomen - this.uitgaven_gezamenlijk - this.uitgaven_persoonlijk - this.aandelen - this.crypto - this.spaardoelen
     this.showTotalSum = this.limitDecimals(this.calculateTotal, 2)
   }
 }
