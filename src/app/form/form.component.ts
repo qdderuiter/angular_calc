@@ -6,7 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./form.component.css']
 })
 export class FormComponent {
-
   inkomen: number = 0;
   uitgaven_gezamenlijk: number = 0
   uitgaven_persoonlijk: number = 0

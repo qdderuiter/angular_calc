@@ -16,12 +16,14 @@ import {MatGridListModule} from '@angular/material/grid-list';
 import { FormsModule } from '@angular/forms';
 import { MatCardModule} from '@angular/material/card';
 import {MatTabsModule} from '@angular/material/tabs';
+import { NgChartsModule } from 'ng2-charts';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     NavComponent,
-    FormComponent
+    FormComponent,
   ],
   imports: [
     BrowserModule,
@@ -37,7 +39,8 @@ import {MatTabsModule} from '@angular/material/tabs';
     MatButtonModule,
     MatSidenavModule,
     MatIconModule,
-    MatListModule
+    MatListModule,
+    NgChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
