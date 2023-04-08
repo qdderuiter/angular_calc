@@ -12,14 +12,10 @@ export class FormComponent {
   aandelen: number = 0
   crypto: number = 0
   spaardoelen: number = 0
-  calculateTotal: number = 0;
-  showTotalSum: number = 0;
-  limitDecimals(value: number, decimals: number): number {
-    const factor = Math.pow(10, decimals);
-    return Math.floor(value * factor) / factor;
-  }
-  berekenTotaal() {
-    this.calculateTotal = this.inkomen - this.uitgaven_gezamenlijk - this.uitgaven_persoonlijk - this.aandelen - this.crypto - this.spaardoelen
-    this.showTotalSum = this.limitDecimals(this.calculateTotal, 2)
+  resterendMaandBedrag: number = 0;
+
+  
+  berekenen() {
+    this.resterendMaandBedrag = this.inkomen - this.uitgaven_gezamenlijk - this.uitgaven_persoonlijk - this.aandelen - this.crypto - this.spaardoelen
   }
 }
