@@ -5,10 +5,27 @@ main {
 .budget-form {
   display: grid;
   grid-template-columns: 1fr;
-  height: 80vh;
 }
 
 .container {
   display: grid;
-  padding-bottom: 1em;
 }
+
+.maandbedrag {
+  font-size: larger;
+}
+
+.mat-mdc-card {
+  margin-top: 1em;
+}
+
+.mat-mdc-card-content {
+  font-size: larger;
+  font-weight: 500;
+}
+
+@media (min-width: 650px) {
+  
+}
+
+
