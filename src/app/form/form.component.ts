@@ -21,8 +21,12 @@ export class FormComponent {
   spaardoelen: number = 0;
   resterendMaandBedrag: number = 0;
 
+  totaalInkomen: number = 0;
+  totaalUitgaven: number = 0;
+
+
   getValuesFromLocalStorage() {
-    this.inkomen = Math.floor(Number(this.localStore.getData('inkomen')));
+    this.inkomen = Number(this.localStore.getData('inkomen'));
     this.uitgaven_gezamenlijk = Number(
       this.localStore.getData('uitgaven_gezamenlijk')
     );
@@ -58,12 +62,12 @@ export class FormComponent {
 
   berekenen() {
     this.resterendMaandBedrag =
-      this.inkomen -
-      this.uitgaven_gezamenlijk -
-      this.uitgaven_persoonlijk -
-      this.aandelen -
-      this.crypto -
-      this.spaardoelen;
+    this.inkomen -
+    this.uitgaven_gezamenlijk -
+    this.uitgaven_persoonlijk -
+    this.aandelen -
+    this.crypto -
+    this.spaardoelen;
     this.saveToLocalStorage();
     this.getValuesFromLocalStorage();
   }
