@@ -1,3 +1,5 @@
 # AngularCalc
 
-Estimate your monthly expenses - made with angular material
+Estimate your monthly expenses
+- Saves input with localhost
+- Uses angular material
