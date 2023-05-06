@@ -31,7 +31,5 @@ export class FormComponent {
 
     this.resterendMaandBedrag =
       this.inkomen - this.totaalUitgaven.reduce((acc, val) => acc + val, 0);
-    this.saveToLocalStorage();
-    this.getValuesFromLocalStorage();
   }
 }
