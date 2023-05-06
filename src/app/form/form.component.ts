@@ -43,21 +43,15 @@ export class FormComponent {
     this.localStore.saveData('inkomen', JSON.stringify(this.inkomen));
     this.localStore.saveData(
       'uitgaven_gezamenlijk',
-      JSON.stringify(this.totaalUitgaven[1])
+      JSON.stringify(this.uitgaven_gezamenlijk)
     );
     this.localStore.saveData(
       'uitgaven_persoonlijk',
-      JSON.stringify(this.totaalUitgaven[2])
+      JSON.stringify(this.uitgaven_persoonlijk)
     );
-    this.localStore.saveData(
-      'aandelen',
-      JSON.stringify(this.totaalUitgaven[3])
-    );
+    this.localStore.saveData('aandelen', JSON.stringify(this.aandelen));
     this.localStore.saveData('crypto', JSON.stringify(this.totaalUitgaven[4]));
-    this.localStore.saveData(
-      'spaardoelen',
-      JSON.stringify(this.totaalUitgaven[4])
-    );
+    this.localStore.saveData('spaardoelen', JSON.stringify(this.spaardoelen));
     this.localStore.saveData(
       'resterent_maandbedrag',
       JSON.stringify(this.resterendMaandBedrag)
