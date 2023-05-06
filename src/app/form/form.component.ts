@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { LocalStorageService } from '../local-storage.service';
 
 @Component({
   selector: 'app-form',
@@ -7,11 +6,9 @@ import { LocalStorageService } from '../local-storage.service';
   styleUrls: ['./form.component.css'],
 })
 export class FormComponent {
-  constructor(private localStore: LocalStorageService) {}
+  constructor() {}
 
-  ngOnInit(): void {
-    this.getValuesFromLocalStorage();
-  }
+  ngOnInit(): void {}
 
   inkomen: number = 0;
   uitgaven_gezamenlijk: number = 0;
@@ -22,41 +19,6 @@ export class FormComponent {
   resterendMaandBedrag: number = 0;
 
   totaalUitgaven: Array<number> = [];
-
-  getValuesFromLocalStorage() {
-    this.inkomen = Number(this.localStore.getData('inkomen'));
-    this.uitgaven_gezamenlijk = Number(
-      this.localStore.getData('uitgaven_gezamenlijk')
-    );
-    this.uitgaven_persoonlijk = Number(
-      this.localStore.getData('uitgaven_persoonlijk')
-    );
-    this.aandelen = Number(this.localStore.getData('aandelen'));
-    this.crypto = Number(this.localStore.getData('crypto'));
-    this.spaardoelen = Number(this.localStore.getData('spaardoelen'));
-    this.resterendMaandBedrag = Number(
-      this.localStore.getData('resterent_maandbedrag')
-    );
-  }
-
-  saveToLocalStorage() {
-    this.localStore.saveData('inkomen', JSON.stringify(this.inkomen));
-    this.localStore.saveData(
-      'uitgaven_gezamenlijk',
-      JSON.stringify(this.uitgaven_gezamenlijk)
-    );
-    this.localStore.saveData(
-      'uitgaven_persoonlijk',
-      JSON.stringify(this.uitgaven_persoonlijk)
-    );
-    this.localStore.saveData('aandelen', JSON.stringify(this.aandelen));
-    this.localStore.saveData('crypto', JSON.stringify(this.totaalUitgaven[4]));
-    this.localStore.saveData('spaardoelen', JSON.stringify(this.spaardoelen));
-    this.localStore.saveData(
-      'resterent_maandbedrag',
-      JSON.stringify(this.resterendMaandBedrag)
-    );
-  }
 
   berekenen() {
     this.totaalUitgaven = [
