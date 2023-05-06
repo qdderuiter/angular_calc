@@ -10,7 +10,7 @@ export class FormComponent {
   constructor(private localStore: LocalStorageService) {}
 
   ngOnInit(): void {
-    this.getValuesFromLocalStorage();
+    // this.getValuesFromLocalStorage();
   }
 
   inkomen: number = 0;
@@ -21,9 +21,7 @@ export class FormComponent {
   spaardoelen: number = 0;
   resterendMaandBedrag: number = 0;
 
-  totaalInkomen: number = 0;
-  totaalUitgaven: number = 0;
-
+  totaalUitgaven: Array<number> = [];
 
   getValuesFromLocalStorage() {
     this.inkomen = Number(this.localStore.getData('inkomen'));
@@ -61,13 +59,19 @@ export class FormComponent {
   }
 
   berekenen() {
-    this.resterendMaandBedrag =
-    this.inkomen -
-    this.uitgaven_gezamenlijk -
-    this.uitgaven_persoonlijk -
-    this.aandelen -
-    this.crypto -
-    this.spaardoelen;
+    this.totaalUitgaven = [
+      this.uitgaven_gezamenlijk,
+      this.uitgaven_persoonlijk,
+      this.aandelen,
+      this.crypto,
+      this.spaardoelen,
+    ];
+
+    this.resterendMaandBedrag = this.totaalUitgaven.reduce(
+      (acc, cur) => acc - cur,
+      this.inkomen
+    );
+
     this.saveToLocalStorage();
     this.getValuesFromLocalStorage();
   }
