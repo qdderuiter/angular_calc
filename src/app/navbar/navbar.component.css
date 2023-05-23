@@ -1,0 +1,4 @@
+.mat-toolbar.mat-primary {
+    display: flex;
+    justify-content: space-between;
+}
