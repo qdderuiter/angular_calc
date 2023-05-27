@@ -6,9 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./form.component.css'],
 })
 export class FormComponent {
-  constructor() {}
-
-  ngOnInit(): void {}
 
   inkomen: number = 0;
   uitgaven_gezamenlijk: number = 0;
@@ -30,6 +27,6 @@ export class FormComponent {
     ];
 
     this.resterendMaandBedrag =
-      this.inkomen - this.totaalUitgaven.reduce((acc, val) => acc + val, 0);
+      this.resterendMaandBedrag = this.inkomen - this.totaalUitgaven.reduce((acc, val) => acc + val, 0)
   }
 }
